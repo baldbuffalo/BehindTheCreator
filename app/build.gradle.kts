@@ -12,8 +12,8 @@ android {
         applicationId = "com.baldbuffalo.behindthecreator"
         minSdk = 24
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
     }
 
     compileOptions {
@@ -25,9 +25,7 @@ android {
         jvmTarget = "17"
     }
 
-    buildFeatures {
-        compose = true
-    }
+    buildFeatures { compose = true }
 }
 
 dependencies {
@@ -39,5 +37,6 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
     implementation("androidx.navigation:navigation-compose:2.8.7")
+    implementation("io.coil-kt.coil3:coil-compose:3.1.0")
     debugImplementation("androidx.compose.ui:ui-tooling")
 }
