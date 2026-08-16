@@ -12,8 +12,23 @@ android {
         applicationId = "com.baldbuffalo.behindthecreator"
         minSdk = 24
         targetSdk = 35
-        versionCode = 2
-        versionName = "1.1"
+        versionCode = 3
+        versionName = "1.2"
+    }
+
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
+
+    val youtubeApiKey = providers.gradleProperty("YOUTUBE_API_KEY").orNull ?: ""
+    buildTypes {
+        getByName("debug") {
+            buildConfigField("String", "YOUTUBE_API_KEY", "\"$youtubeApiKey\"")
+        }
+        getByName("release") {
+            buildConfigField("String", "YOUTUBE_API_KEY", "\"$youtubeApiKey\"")
+        }
     }
 
     compileOptions {
@@ -22,7 +37,6 @@ android {
     }
 
     kotlinOptions { jvmTarget = "17" }
-    buildFeatures { compose = true }
 }
 
 dependencies {
