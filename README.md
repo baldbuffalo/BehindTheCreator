@@ -1,34 +1,44 @@
 # BehindTheCreator
 
-BehindTheCreator is a native Kotlin Android app that turns YouTube creators into an encyclopedia of stories, timelines and lesser-known facts.
+BehindTheCreator is a native Kotlin Android YouTuber encyclopedia. Creator content is separate from the UI: each creator entry is primarily a **YouTube channel URL**, while the app fetches current channel information and displays the custom stories, facts and timelines stored in the data file.
 
-## Current version
+## Creator data
 
-- Native Kotlin + Jetpack Compose UI
-- Creator cards with remote profile pictures
-- Search by creator name or handle
-- Category filters
-- Rich creator detail pages
-- Career/story summaries
-- Lesser-known-facts section
-- Career timeline
-- Source links that open in the system browser
-- MrBeast, Mark Rober, MKBHD and PewDiePie included as starter profiles
-- Automated GitHub Actions debug APK build
+Add creators in `app/src/main/assets/creators.json`.
 
-## Roadmap
+Each entry needs a `channelUrl`. The other fields are the information you control:
 
-- Add many more creators
-- Move creator data into a dedicated local database/JSON data layer
-- Favorites/bookmarks
-- Offline-first profile images and data
-- Better fact-level source attribution
-- Creator discovery and related creators
-- Polished empty/loading/error states
-- Release APK signing and Play Store preparation
+```json
+{
+  "channelUrl": "https://www.youtube.com/@Example",
+  "category": "Technology",
+  "story": "The creator's story...",
+  "facts": ["Interesting fact 1", "Interesting fact 2"],
+  "timeline": ["2015 — Started the channel", "2020 — Major milestone"]
+}
+```
 
-## Build
+When `YOUTUBE_API_KEY` is configured, the app uses the YouTube Data API to fetch the channel name, handle, profile picture, subscriber count and channel creation date. Without an API key it falls back to YouTube oEmbed for basic name and thumbnail data; subscriber count and join date require the Data API.
 
-Open the project in Android Studio and run the `app` configuration. The project uses Kotlin, Jetpack Compose and Gradle 8.10.2.
+## Local API key setup
 
-Every push to `main` also runs the Android build workflow and uploads a debug APK as a GitHub Actions artifact.
+Create `local.properties` in the project root and add:
+
+```text
+YOUTUBE_API_KEY=your_key_here
+```
+
+Do **not** commit `local.properties` or the key. Restrict the API key where possible.
+
+## Current app
+
+- Native Kotlin + Jetpack Compose
+- URL-driven creator data
+- YouTube channel fetching
+- Search and category filters
+- Creator stories, facts and timelines
+- Subscriber count and join date when API data is available
+- Direct link to the original YouTube channel
+- GitHub Actions Android build
+
+The goal is that adding a creator means editing the data file, not rewriting the Android UI.
