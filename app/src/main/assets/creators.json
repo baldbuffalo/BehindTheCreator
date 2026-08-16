@@ -1,0 +1,68 @@
+{
+  "creators": [
+    {
+      "channelUrl": "https://www.youtube.com/@MrBeast",
+      "category": "Entertainment",
+      "story": "Jimmy Donaldson built MrBeast from years of experimentation into one of YouTube's biggest creator brands.",
+      "facts": [
+        "MrBeast operates multiple major YouTube channels.",
+        "The brand has expanded into products, food and other businesses.",
+        "His early uploads covered gaming, commentary and experiments before the channel became known for huge challenges."
+      ],
+      "timeline": [
+        "Early years — experimented with different kinds of YouTube videos.",
+        "2017 — gained major attention from viral challenge content.",
+        "Late 2010s — scaled production and philanthropy-focused videos.",
+        "2020s — expanded into multiple channels and businesses."
+      ]
+    },
+    {
+      "channelUrl": "https://www.youtube.com/@MarkRober",
+      "category": "Science",
+      "story": "Mark Rober combined engineering with entertaining storytelling to make complex science accessible to a huge audience.",
+      "facts": [
+        "Before becoming a full-time creator, Rober worked as an engineer at NASA.",
+        "His videos commonly turn an engineering problem into a large experiment.",
+        "He has built projects designed to teach science through entertainment."
+      ],
+      "timeline": [
+        "Engineering career — worked on projects including NASA's Curiosity rover.",
+        "2011 — began publishing science and engineering videos.",
+        "2010s — developed increasingly ambitious experiments.",
+        "2020s — expanded science education projects and collaborations."
+      ]
+    },
+    {
+      "channelUrl": "https://www.youtube.com/@mkbhd",
+      "category": "Technology",
+      "story": "Marques Brownlee started making technology videos as a teenager and grew MKBHD into a major technology media brand.",
+      "facts": [
+        "He began making technology videos while still in school.",
+        "MKBHD comes from his initials and the letters HD.",
+        "His work expanded beyond reviews into podcasts and interviews."
+      ],
+      "timeline": [
+        "2009 — began publishing technology videos.",
+        "Early 2010s — grew through reviews and tutorials.",
+        "Late 2010s — expanded production and interview-focused content.",
+        "2020s — continued growing MKBHD into a broader media brand."
+      ]
+    },
+    {
+      "channelUrl": "https://www.youtube.com/@PewDiePie",
+      "category": "Gaming",
+      "story": "Felix Kjellberg built a huge audience through gaming commentary and personality-driven videos, becoming one of the defining creators of the 2010s.",
+      "facts": [
+        "The channel originally focused heavily on gaming commentary.",
+        "His content changed genres several times as YouTube and his audience evolved.",
+        "PewDiePie became one of the most recognizable creator brands of the 2010s."
+      ],
+      "timeline": [
+        "2010 — created the PewDiePie channel.",
+        "Early 2010s — rapidly grew through gaming commentary.",
+        "2013 — became the most-subscribed YouTube channel for a period.",
+        "Later years — diversified content beyond gaming."
+      ]
+    }
+  ]
+}
